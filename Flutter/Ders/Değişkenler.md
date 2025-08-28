@@ -22,7 +22,7 @@ var b = 20;
 print("$a ve $b'nin toplamı : ${a+b}");
 ```
 
-# Birden Fazla Değişken Oluşturma
+## Birden Fazla Değişken Oluşturma
 ```
 var s1,s2,s3;
 s1 = 10;
@@ -34,11 +34,11 @@ veya
 int k1 = 44,k2 = 78;
 ```
 
-# Tür dönüşümleri
+## Tür dönüşümleri
 Normalde dönüşümlerde x.toInt(), y.toDouble(), z.toString() dönüşümleri kullanılabilir. Ama int ve double dönüşümü sadece sayıdan sayıya dönüştürür. Metinden sayıya dönüşümlerde parse metodu kullanılır
-````
-  //Metinden Sayısala
 
+### Metinden Sayısala
+  ````
   String yazi1 = "34";
   String yazi2 = "34.67";
 
