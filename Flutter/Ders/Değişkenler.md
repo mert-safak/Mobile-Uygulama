@@ -45,3 +45,12 @@ Normalde dönüşümlerde x.toInt(), y.toDouble(), z.toString() dönüşümleri 
   int s1 = int.parse(yazi1);
   double s2 = double.parse(yazi2);
 ````
+## Konsol Girdisi
+Aşağıdaki gibi stdin.readLineSycn() çağırılır. Nullable kontrolü yapar bu yüzden sonuna ! konulur. Ayrıca her zaman konsoldan alınan veri stringdir. Tür dönüşümü yapmak gerekebilir.
+```
+  print("Adınızı giriniz");
+  
+  String isim = stdin.readLineSync()!;
+
+  print("Adınız : $isim");
+```
