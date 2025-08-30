@@ -18,3 +18,13 @@ class Saray extends Ev {
   Saray({required this.kule_sayisi, required int pencereSayisi}) : super(pencereSayisi : pencereSayisi);
 }
 ```
+ Upcasting üst class'a dönüştürür downcasting ile alt class'a
+ ```
+  //Downcasting
+  var ev  = Ev(pencereSayisi: 10);
+  var saray = ev as Saray;
+
+  //Upcasting
+  var s = Saray(kule_sayisi: 3, pencereSayisi: 100)
+  Ev e = s;
+```
