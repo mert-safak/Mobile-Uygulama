@@ -8,3 +8,13 @@ class Saray extends Ev {
   Saray({required this.kule_sayisi}) : super(pencereSayisi : 100);
 }
 ```
+ Veya değer default olarak verilmek istenmiyorsa 
+ ```
+import 'ev.dart';
+
+class Saray extends Ev {
+  int kule_sayisi;
+
+  Saray({required this.kule_sayisi, required int pencereSayisi}) : super(pencereSayisi : pencereSayisi);
+}
+```
