@@ -18,7 +18,7 @@ class Saray extends Ev {
   Saray({required this.kule_sayisi, required int pencereSayisi}) : super(pencereSayisi : pencereSayisi);
 }
 ```
-## Tür Dönüşümleri
+## Upcasting ve Downcasting
  Upcasting üst class'a dönüştürür downcasting ile alt class'a
  ```
   //Downcasting
