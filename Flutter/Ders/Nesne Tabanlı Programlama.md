@@ -8,7 +8,7 @@ class Saray extends Ev {
   Saray({required this.kule_sayisi}) : super(pencereSayisi : 100);
 }
 ```
- Veya değer default olarak verilmek istenmiyorsa 
+ Veya değer default olarak verilmek istenmiyorsa aşağıdaki şekilde yapılabilir.
  ```
 import 'ev.dart';
 
