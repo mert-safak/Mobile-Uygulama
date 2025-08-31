@@ -48,4 +48,40 @@ Resim hata verirse vb. durdur başlat yapılır( Hot reload bazen sorun yapıyor
 Image.asset("resimler/pizza_resim.png"),
 ```
 
+## Çoklu Ekran Desteği
+Temel mantık oranlama üzerine kuruludur. FGenişil ve yükseklik değeri alınıp fontlar orantılı şekilde yapılabilir.
+
+```
+class _AnasayfaState extends State<Anasayfa> {
+  @override
+  Widget build(BuildContext context) {
+    var ekranBilgisi = MediaQuery.of(context);
+    final double ekranYuksekligi = ekranBilgisi.size.height;
+    final double ekranGenisligi = ekranBilgisi.size.width;
+    print("Ekran yüksekliği : $ekranYuksekligi");
+    print("Ekran genişliği : $ekranGenisligi");
+```
+
+### Örneğin 
+Burda görüldüğü gibi ekran genişliğine orantılı font seçilmiştir. Paddingler de ekran height değerine göre seçilebilir.
+
+```
+      appBar: AppBar(
+        title: Text("Pizza",style: TextStyle(color: yaziRenk1, fontFamily: "Pacifico", fontSize: ekranGenisligi/19 ),),
+        backgroundColor: anaRenk,
+        centerTitle: true,
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
