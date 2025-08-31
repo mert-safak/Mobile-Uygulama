@@ -1,4 +1,4 @@
-#Kod önerilerini açma
+# Kod önerilerini açma
 Android studio'da ctrl+space ile kod önerileri görünür. Bunu sürekli kullanmak gerekir.
 
 # Tasarım için renk seçme
