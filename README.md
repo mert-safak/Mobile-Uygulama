@@ -1,5 +1,6 @@
 Android studio'da ctrl+space ile kod önerileri görünür. Bunu sürekli kullanmak gerekir.
 
+
 Materyal renkleri bulabilmek için direkt google'a metarial color yazılabilir.
 
 https://www.materialpalette.com/
