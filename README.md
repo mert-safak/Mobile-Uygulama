@@ -9,5 +9,7 @@ https://materialui.co/colors
 https://color.adobe.com/tr/  - keşefedine gidip temasını yazarsan renk kodları öneriyor
 
 # Font Seçme
-
 https://fonts.google.com/
+
+# Widget Seçme
+https://m3.material.io/ - Bu siteye girip components kısmından widgetları görebiliriz.
