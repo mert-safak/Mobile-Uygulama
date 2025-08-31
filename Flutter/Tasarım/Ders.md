@@ -22,10 +22,18 @@ Yorum satırıyla yazılmış örneği de mevcuttur taslak olarak kullanılır. 
 3 farklı şekilde yerleşebilir row(satır), column(sütun), stack(üst üste)
 
 ### MainAxisAlignment
+Ane eksende hizalama yapar.
 start - varsayılan olarak başladığı yerden bitişik hizalar.
 end - en sonuna bitişik hizalar.
 center - merkeze bitişik hizalar.
 spaceBetween- Başlangıç orta ve bitiş olarka hizalar
 spaceEvenly - Araya boşluklar atarak hizalar.
+
+### CrossAxisAlignment
+Diğer eksende hizalama yapar.
+start - varsayılan olarak başladığı yerden bitişik hizalar.
+end - en sonuna bitişik hizalar.
+center - Ortalayarak başlangıçtan hizalar.
+stretch - kendini uzatarak hizalar.
 
 
