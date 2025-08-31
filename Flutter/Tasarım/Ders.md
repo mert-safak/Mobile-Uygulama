@@ -48,6 +48,44 @@ Resim hata verirse vb. durdur başlat yapılır( Hot reload bazen sorun yapıyor
 Image.asset("resimler/pizza_resim.png"),
 ```
 
+## Tekrar Eden Widget'ları Ayrı Widget Haline Getirme
+En alta gelinir "st" yazılır ve çıkanlardan stless seçilir bu şekilde taslak bir class oluşturulur. Oluşan const kısmı silinir onun yerine kendimiz constructor tanımlayacağız. Burada class ve extendes arasına class ismi yazılır. 
+
+```
+class  extends StatelessWidget {
+  const ({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+```
+
+Devamında super anahtarının olduğu satır(constructor) silinir ve içerisine almasını istediğimiz değerler yazılır. Örneğin tek değişen şey string olacağı için bir string döndüreceğiz. Daha sonra ctrl+insert ile hepsi seçilerek uygun bir constructor oluşturulur. En sondaki return kısmına da daha önceki widget'ımızın kodları kopyalanır. 
+```
+class Chip extends StatelessWidget {
+  String icerik;
+  Chip({required this.icerik});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){},
+      style: TextButton.styleFrom(backgroundColor: anaRenk),
+      child: Text(icerik,style: TextStyle(color:yaziRenk1),),
+    );
+  }
+}
+```
+Son olarak da aşağıdaki kodlar widget kodu yerine yazılarak widget olarak kullanılabilir.
+```
+                Chip(icerik: "Cheese"),
+                Chip(icerik: "Sausage"),
+                Chip(icerik: "Olive"),
+                Chip(icerik: "Pepper"),
+```
+
+
 ## Çoklu Ekran Desteği
 Temel mantık oranlama üzerine kuruludur. FGenişil ve yükseklik değeri alınıp fontlar orantılı şekilde yapılabilir.
 
