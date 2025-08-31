@@ -1,6 +1,9 @@
 # Kod önerilerini açma
 Android studio'da ctrl+space ile kod önerileri görünür. Bunu sürekli kullanmak gerekir.
 
+# Tasarım Şablonu Önerileri
+https://elements.envato.com/graphic-templates/ux-and-ui-kits
+
 # Tasarım için renk seçme
 Materyal renkleri bulabilmek için direkt google'a metarial color yazılabilir.
 
