@@ -36,4 +36,16 @@ end - en sonuna bitişik hizalar.
 center - Ortalayarak başlangıçtan hizalar.
 stretch - kendini uzatarak hizalar.
 
+## Resim ekleme
+Yine ana klasör altına package eklenim ismi resimler yapılıp resim içerisine atılır. Daha sonra pubspec.yaml içerisine flutter'ın altına aşağıdaki kod eklenirse(örneği pubspec.yaml içerisinde mevcut) pub get denilirse resim yüklenir.
+```
+flutter:
+  assets:
+    - resimler/pizza_resim.png
+```
+Resim hata verirse vb. durdur başlat yapılır( Hot reload bazen sorun yapıyor). Aşağıdaki şekilde anaysayfa içerisine asset eklenebilir. Image.asset kısmı imleç ile seçilip Alt+Enter yapılıp padding seçilrse padding verecek şekilde kodu düzenler.
+```
+Image.asset("resimler/pizza_resim.png"),
+```
+
 
