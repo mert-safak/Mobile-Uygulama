@@ -18,3 +18,22 @@ onPressed köşeli parantezinin içerisine de Navigator.pop(context) eklenirse A
         }, icon: const Icon(Icons.arrow_back_ios_new)),
       ),
 ```
+## Telefon Geri Tuşu veya Geriye Kaydırma
+
+Öncelikle aşağıdaki gibi class'ın altına bir async fonksiyon tanımlanır. Return false ile geri dönmeyi kapatır. true olursa geri dönebilir.
+```
+class _OyunEkraniState extends State<OyunEkrani> {
+
+  Future<bool> geriDonusTusu(BuildContext context) async {
+    print("Navigation geri tuşu seçildi");
+    return true;
+  }
+```
+
+Daha sonra body'deki center vb. ilk katman imleç ile seçilerek Wrap with Widget denir. Çünkü ihtiyacımız olan widget listede yok. oraya WillPopScope yazılır. Bu widget geriye gitmeyi kontrol eder. Devamında ise aşağıdaki şekilde yapılarak fonskiyon verilir ve son hali görülür.
+```
+      body: WillPopScope(
+        onWillPop: () => geriDonusTusu(context),
+        child: Center(
+```
+ 
