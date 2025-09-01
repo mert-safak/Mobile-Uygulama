@@ -19,3 +19,30 @@ Anasayfa hata vermektedir. Sebebi az önce oluşturduğumuz veriler constructor 
 ```
 Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(ad: "mert", yas: 31, boy: 177, bekar: false),));
 ```
+
+Bu Şekilde yapıldığında çok uzun verileri göndermek çok karışıklığa sebep olur bu yüzden class olarak bütün halde veri göndermek daha doğru olur. örneğim Önce lib içerisine kisiler isimli bir dart file oluşturulup daha sonra göndermek istenen veriler  tanımlanır. Örneğin Aşağıdaki gibi. Sonra constructor oluşturulur.
+```
+class Kisiler {
+  String ad;
+  int yas;
+  double boy;
+  bool bekar;
+
+  Kisiler({required this.ad, required this.yas, required this.boy, required this.bekar});
+}
+```
+
+Daha sonra örneğin sayfa geçişini yaptığımız ElevatedButton altına  aşağıdaki şekilde bir kisiler nesnesi oluşturulur.
+```
+var kisi = Kisiler(ad: "Mert", yas: 31, boy: 177, bekar: false);
+```
+Sonra örneğin oyun_ekrani.dart sayfasında tekrar class ve constructorlar tanımlanır.
+```
+class OyunEkrani extends StatefulWidget {
+  Kisiler kisi;
+  OyunEkrani({required this.kisi});
+```
+Devamında ise Navigator'deki OyunEkranı tekrar değiştirilir çünkü constructor'lar yine değişti
+```
+Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(kisi: kisi),));
+```
