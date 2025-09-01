@@ -18,3 +18,14 @@ Sayfa ilk açıldığında çalışır. initState yazılıp seçilerek hazır ta
     print("initState() çalışıyor");
   }
 ```
+## .then
+Sayfadan geçiş yapıldıpında çalışan yaşam döngüsü. Navigatorden sonra yazılır. Sonuna .than konur tamamlanır. Sonra içerisindeki value'ye de parantezli olan seşilir. Devamında içerisine kod yazılırsa o kod çalışır.
+```
+            ElevatedButton(onPressed: (){
+              var kisi = Kisiler(ad: "Mert", yas: 31, boy: 177, bekar: false);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(kisi: kisi),))
+                  .then((value) {
+                  print("Anasayfaya dönüldü çalışıyor");
+                  },);
+            }, child: const Text("Başla"))
+```
