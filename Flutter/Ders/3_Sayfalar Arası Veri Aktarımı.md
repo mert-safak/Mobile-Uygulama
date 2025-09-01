@@ -37,7 +37,7 @@ Daha sonra örneğin sayfa geçişini yaptığımız ElevatedButton altına  aş
 ```
 var kisi = Kisiler(ad: "Mert", yas: 31, boy: 177, bekar: false);
 ```
-Sonra örneğin oyun_ekrani.dart sayfasında tekrar class ve constructorlar tanımlanır.
+Sonra örneğin oyun_ekrani.dart sayfasında tekrar class ve constructorlar tanımlanır. widget'ların da düzeltilmesi gerekir.
 ```
 class OyunEkrani extends StatefulWidget {
   Kisiler kisi;
