@@ -8,3 +8,13 @@ setState yapılan bir değişiklikte sayfanın yenilenmesini sağlar. Örneğin 
               });
             }, child: const Text("Tıkla")),
 ```
+## initState
+Sayfa ilk açıldığında çalışır. initState yazılıp seçilerek hazır taslağı getirir.
+```
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("initState() çalışıyor");
+  }
+```
