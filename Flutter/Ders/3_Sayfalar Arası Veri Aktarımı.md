@@ -20,7 +20,8 @@ Anasayfa hata vermektedir. Sebebi az önce oluşturduğumuz veriler constructor 
 Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(ad: "mert", yas: 31, boy: 177, bekar: false),));
 ```
 
-Bu Şekilde yapıldığında çok uzun verileri göndermek çok karışıklığa sebep olur bu yüzden class olarak bütün halde veri göndermek daha doğru olur. örneğim Önce lib içerisine kisiler isimli bir dart file oluşturulup daha sonra göndermek istenen veriler  tanımlanır. Örneğin Aşağıdaki gibi. Sonra constructor oluşturulur.
+## Nesne Tabanlı Programlama(Class) ile Veri Gönderme
+Yukardaki Şekilde yapıldığında çok uzun verileri göndermek çok karışıklığa sebep olur bu yüzden class olarak bütün halde veri göndermek daha doğru olur. örneğim Önce lib içerisine kisiler isimli bir dart file oluşturulup daha sonra göndermek istenen veriler  tanımlanır. Örneğin Aşağıdaki gibi. Sonra constructor oluşturulur.
 ```
 class Kisiler {
   String ad;
