@@ -53,3 +53,8 @@ body: sayfalar[secilenIndeks],
       ),
     );
 ```
+## Çeşitli Görselleştirmeler
+Aşağıdaki gibi özellikler ile de çeşitli görsel özelleştirmeler yapılabilir.
+        backgroundColor: Colors.blue,
+        selectedItemColor: Colors.red,
+        unselectedItemColor: Colors.white,
