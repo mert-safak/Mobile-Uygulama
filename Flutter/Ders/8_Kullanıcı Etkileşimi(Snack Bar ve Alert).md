@@ -14,3 +14,17 @@ Aşağıda ElevatedButton içerisinde yazılmış hali mevcuttur.
               child: const Text("Snackbar"),
             ),
 ```
+Ayrıica bir de içerisine action tanımlanarak bir eylem gerçekleştirilebilir veya yeni bir SnackBar ile bilgi verilebilir. Aşağıda yeni bir SnackBar ile bilgi verilmiştir.
+```
+            ElevatedButton(onPressed: (){
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text("Silmek istiyor musunuz?"),
+                    action: SnackBarAction(label: "Evet", onPressed: (){
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text("Siindi"),));
+                    }),
+                  ));
+            },
+              child: const Text("Snackbar"),
+            ),
+```
