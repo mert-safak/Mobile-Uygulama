@@ -105,7 +105,7 @@ Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton 
 ```
 
 ## Alert Dialog Özelleştirme
-Kodun devamında özelleştirme TextField() ile yapılacak bu yüzden öncelikle _ ile başlayan sayfa class'ına aşağıdaki kod yazılır ve bir TexEditController tanımlanır.
+Kodun devamında özelleştirme TextField() ile yapılacak bu yüzden öncelikle _ ile başlayan sayfa class'ına aşağıdaki kod yazılır ve bir TexEditController tanımlanır. Eğer TexField tekrar açıldığında son girilen verinin görünmemesi istenirse temizlemek gerekir tfControl.text = ""; bu kod yazılarak daha sonra tekrar açıldığında ilk haline döner.
 ```
 var tfControl = TextEditingController();
 ```
@@ -128,6 +128,7 @@ Kodun devamı ise aşağıdaki şekildedir.
                         TextButton(onPressed: (){
                           print("Alınan Veri ${tfControl.text}");
                           Navigator.pop(context);
+                          tfControl.text = "";
                         }, child: const Text("Kaydet",style: TextStyle(color: Colors.black),),)
                       ],
                     );
