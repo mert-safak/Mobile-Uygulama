@@ -51,3 +51,73 @@ Ayrıca istenirse aşağıdaki şekilde de özelleştirmeler yapılabilir.
               child: const Text("Snackbar (özel)"),
             ),
 ```
+## Alert Dialog
+### Alert Dialog Kod
+Alert Dialog aşağıdaki kod ile yapılır.
+```
+             showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return AlertDialog(
+                      title: const Text("Başlık"),
+                      content : Text("İçerik")
+                    );
+```
+### Button İçinde Alert Dialog
+```
+            ElevatedButton(onPressed: (){
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return AlertDialog(
+                      title: const Text("Başlık"),
+                      content : Text("İçerik")
+                    );
+                  }
+              );
+            },
+              child: const Text("Alert"),
+            ),
+            ElevatedButton(onPressed: (){},
+              child: const Text("Alert Özel"),
+            ),
+```
+### Alert Dialog İçerisine Buton Ekleme
+Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton eklenebilir. Bu button tek başına tıklamayla işlem yapar ama tıklandıktan sonra kapanmaz. kapatılmak istenirse Navigator.pop(context) yani sayfanın geri tuşunu çalıştırma kullanılır.
+```
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return AlertDialog(
+                      title: const Text("Başlık"),
+                      content : Text("İçerik"),
+                      actions: [
+                        TextButton(onPressed: (){
+                          print("İptal Seçildi");
+                          Navigator.pop(context);
+                        }, child: const Text("İptal"),),
+                        TextButton(onPressed: (){
+                          print("Tamam Seçildi");
+                          Navigator.pop(context);
+                        }, child: const Text("Tamam"),)
+                      ],
+                    );
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
