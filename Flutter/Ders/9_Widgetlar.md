@@ -44,3 +44,42 @@ Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir. 
   assets:
     - resimler/
 ```
+Devamında ise Image.asset ekleyerek resimler gösterilir
+```
+Image.asset("resimler/mutlu.png"),
+```
+Butonlara tıklayarak değişimini yaptığımız kod ise`aşağıdadır. Burada sadece resimAdi değişkeni _ ile başlayan class isminin altında String resimAdi = "mutlu.png"; bu şekilde başlangıç değeri olarak tanımlanmıştır.
+```
+            Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
+              children: [
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    resimAdi = "mutlu.png";
+                  });
+                }, child: const Text("Resim 1"),
+                ),
+                Image.asset("resimler/$resimAdi"),
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    resimAdi = "uzgun.png";
+                  });
+                }, child: const Text("Resim 2"),
+                ),
+              ],
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
