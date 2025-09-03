@@ -104,8 +104,39 @@ Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton 
                     );
 ```
 
+## Alert Dialog Özelleştirme
+Kodun devamında özelleştirme TextField() ile yapılacak bu yüzden öncelikle _ ile başlayan sayfa class'ına aşağıdaki kod yazılır ve bir TexEditController tanımlanır.
+```
+var tfControl = TextEditingController();
+```
 
-
+Kodun devamı ise aşağıdaki şekildedir.
+```
+            ElevatedButton(onPressed: (){
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return AlertDialog(
+                      title: const Text("Kayıt İşlemi"),
+                      content : TextField(controller: tfControl, decoration: InputDecoration(hintText: "Veri"),),
+                      backgroundColor: Colors.grey,
+                      actions: [
+                        TextButton(onPressed: (){
+                          print("İptal Seçildi");
+                          Navigator.pop(context);
+                        }, child: const Text("İptal",style: TextStyle(color: Colors.black),),),
+                        TextButton(onPressed: (){
+                          print("Alınan Veri ${tfControl.text}");
+                          Navigator.pop(context);
+                        }, child: const Text("Kaydet",style: TextStyle(color: Colors.black),),)
+                      ],
+                    );
+                  }
+              );
+            },
+              child: const Text("Alert Özel"),
+            ),
+```
 
 
 
