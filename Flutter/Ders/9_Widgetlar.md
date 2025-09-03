@@ -27,7 +27,7 @@ class _AnasayfaState extends State<Anasayfa> {
 }
 ```
 ## ElevatedButton
-Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir.
+Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir. İsmini TextButton olarak değiştirirsek de çerçevesiz sadece yazı olan bir button çıkar.
 ```
             ElevatedButton(onPressed: (){
               setState(() {
@@ -35,4 +35,12 @@ Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir.
               });
             }, child: const Text("Veriyi Al"),
             ),
+```
+## Resim Gösterme
+Öncelikle ana paketin üzerine bir klasör oluşturulur tercihen ismi resimler. Sonra resimler bu klasörün içerisine atılır. Lib klasörünün içinde olursa resimler görünmez ana paketin altında olacak klasör. Daha sonra resimler klasörünün pubspec.yaml içerisine eklenmesi gerekir bunun için ilgili satıra assets: ve altına klasör aşağıdaki şekilde yazılır boşluklar ve girintiler çok önemlidir. Bu yüzden true'dan sonra enter'a basılır assets: yazılıp tekrar enter'a basılır ve - koyulup boşluk bırakılıp klasör yazılır sonuna / konulur.
+```
+  uses-material-design: true
+
+  assets:
+    - resimler/
 ```
