@@ -26,3 +26,13 @@ class _AnasayfaState extends State<Anasayfa> {
   }
 }
 ```
+## ElevatedButton
+Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir.
+```
+            ElevatedButton(onPressed: (){
+              setState(() {
+                alinanVeri = tfController.text;
+              });
+            }, child: const Text("Veriyi Al"),
+            ),
+```
