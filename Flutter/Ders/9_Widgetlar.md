@@ -73,7 +73,12 @@ Image.asset değil de Image.network kullanacağız. src yazan yere "" içerisind
 ```
 Image.network(src)
 ```
-
+#### SizedBox ile boyutunu ayarlama
+Image.network imleç ile seçilip alt+enter yapılıp wrap with SizedBox seçilirse. Width ve Height değerleri girilip resmin boyutu değiştirilebilir.
+```
+SizedBox(width: 100, height: 100,
+              child: Image.network("https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/ev-usulu-pizza-yemekcom.jpg"),),
+```
 
 
 
