@@ -4,6 +4,7 @@ Bir buton içerisine tanımlanabilir. Veya başka bir aksiyona da tanımlanabili
 ```
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: const Text("Silmek istiyor musunuz?")));
+### Button içerisinde SnackBar
 ```
 Aşağıda ElevatedButton içerisinde yazılmış hali mevcuttur.
 ```
@@ -28,7 +29,7 @@ Ayrıica bir de içerisine action tanımlanarak bir eylem gerçekleştirilebilir
               child: const Text("Snackbar"),
             ),
 ```
-
+### Çeşitli SnackBar Özelleştirmeleri
 Ayrıca istenirse aşağıdaki şekilde de özelleştirmeler yapılabilir.
 ```
             ElevatedButton(onPressed: (){
