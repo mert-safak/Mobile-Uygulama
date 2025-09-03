@@ -28,3 +28,24 @@ Ayrıica bir de içerisine action tanımlanarak bir eylem gerçekleştirilebilir
               child: const Text("Snackbar"),
             ),
 ```
+
+Ayrıca istenirse aşağıdaki şekilde de özelleştirmeler yapılabilir.
+```
+            ElevatedButton(onPressed: (){
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text("Silmek istiyor musunuz?",style: TextStyle(color: Colors.indigoAccent),),
+                    backgroundColor: Colors.white ,
+                    action: SnackBarAction(label: "Evet", textColor: Colors.red, onPressed: (){
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: const Text("Siindi",style: TextStyle(color: Colors.red)),
+                            backgroundColor: Colors.white,
+                            ));
+
+                    }),
+                  ));
+            },
+              child: const Text("Snackbar (özel)"),
+            ),
+```
