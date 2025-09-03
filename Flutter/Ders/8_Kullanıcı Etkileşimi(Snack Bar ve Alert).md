@@ -83,7 +83,7 @@ Alert Dialog aşağıdaki kod ile yapılır.
             ),
 ```
 ### Alert Dialog İçerisine Buton Ekleme
-Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton eklenebilir. Bu button tek başına tıklamayla işlem yapar ama tıklandıktan sonra kapanmaz. kapatılmak istenirse Navigator.pop(context) yani sayfanın geri tuşunu çalıştırma kullanılır.
+Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton eklenebilir. Bu button tek başına tıklamayla işlem yapar ama tıklandıktan sonra kapanmaz. kapatılmak istenirse Navigator.pop(context) ile cihazın geri tuşunu çalıştırma kullanılır.
 ```
               showDialog(
                   context: context,
