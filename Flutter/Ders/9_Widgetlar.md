@@ -68,8 +68,11 @@ Butonlara tıklayarak değişimini yaptığımız kod ise`aşağıdadır. Burada
               ],
 ```
 
-
-
+### Online Resim Gösterme
+Image.asset değil de Image.network kullanacağız. src yazan yere "" içerisinde url yazarsak resim görünür.
+```
+Image.network(src)
+```
 
 
 
