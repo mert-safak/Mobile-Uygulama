@@ -120,7 +120,42 @@ Fark sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! 
                       }
                   ),
 ```
-
+## RadioList
+CheckBox gibi ancak sadece tek biri seçilebilir. Öncelikle yine bir değişken tanımlanır ancak bu sfer integer olarak.
+```
+int radioDeger = 0;
+```
+Devamında ise kod aşağıdaki gibidir
+```
+Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(width: 200,
+                  child: RadioListTile(
+                    title: const Text("Barcelona"),
+                      value: 1,
+                      groupValue: radioDeger,
+                      onChanged: (veri){
+                        setState(() {
+                          radioDeger = veri!;
+                        });
+                      }
+                  ),
+                ),
+                SizedBox(width: 200,
+                  child: RadioListTile(
+                      title: const Text("Real Madrid"),
+                      value: 2,
+                      groupValue: radioDeger,
+                      onChanged: (veri){
+                        setState(() {
+                          radioDeger = veri!;
+                        });
+                      }
+                  ),
+                ),
+              ],
+            ),
+```
 
 
 
