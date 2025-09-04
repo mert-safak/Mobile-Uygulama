@@ -156,6 +156,29 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               ],
             ),
 ```
-
-
+## ProggressBar
+Ekrana yükleniyor şeklinde bir widget eklemek için kullanılır. Yine önce bir değişken tanımlanır.
+```
+bool progressKontrol = false;
+```
+Burada 2 buton ile bu progress bar çıkartılmıştır veya durdurulmuştur. Burada önce CircularProgressIndicator() isimli bir widget eklenir. Daha sonra alt+enter wrap with widget ile üzerine bir Visibility widget eklenir. Buradan da görünür olma olmama durumunu kontrol eden değişkenimiz atanır.
+```
+Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    progressKontrol = true;
+                  });
+                }, child: const Text("Başla")
+                ),
+                Visibility(visible: progressKontrol, child: const CircularProgressIndicator()),
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    progressKontrol = false;
+                  });
+                }, child: const Text("Dur")
+                ),
+              ],
+            )
+```
 
