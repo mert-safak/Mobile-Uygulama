@@ -181,4 +181,32 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               ],
             )
 ```
+## Slider
+Öncelikle yine _ ile başlayan class'a bir değişken tanımlanır.
+```
+double ilerleme = 30.0;
+```
+Devamında ise Slider widget'ı eklenir üzerine de takip edebilmek için bir text eklenebilir. Text'te double'da çok fazla ondalık olduğu için önce int'e çevirip sonra string yaptık.
+```
+            Text(ilerleme.toInt().toString()),
+            Slider(max:100, min:0.0, value: ilerleme, onChanged: (veri){
+              setState(() {
+                ilerleme = veri;
+              });
+            }),
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
