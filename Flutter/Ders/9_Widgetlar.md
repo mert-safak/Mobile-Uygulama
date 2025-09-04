@@ -80,12 +80,40 @@ SizedBox(width: 100, height: 100,
               child: Image.network("https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/ev-usulu-pizza-yemekcom.jpg"),),
 ```
 
+## Switch
+İlk önce _ ile başlayan class'da true,false kontrol için bir değişken oluşturulur.
+```
+bool switchKontrol = false;
+```
+Daha sonra bir SwitchListeTile Widget'ı oluşturulur. Bunu SizedBox'a almaz ve width değeri vermezsek ekranı kaplar ve ekran boş görünür. controlAffinity: ListTileControlAffinity.leading şu satırda chechbox'ın solda title'ın ise sağdaq olmasını sağlıyoruz. En sonda setState ile de switch konumunu değiştirip baştan çizdiriyoruz.
+```
+                SizedBox(width: 200,
+                  child: SwitchListTile(
+                    title: const Text("Dart"), // başlık
+                      controlAffinity: ListTileControlAffinity.leading, //Switch'i title'ın soluna alır
+                      value: switchKontrol, //burası Switch'in konumudur.
+                      onChanged: (veri){ // Burada (veri) callBack mantığı gibidir konumunu söyler. 
+                        setState(() {
+                          switchKontrol = veri;
+                        });
+                      }
+                  ),
+                ),
+```
 
-
-
-
-
-
+## ChechBox
+Mantık Switch'in aynısıdır. Sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! şeklinde sonunda ! olarak yazılır.
+                SizedBox(width: 200,
+                  child: CheckboxListTile(
+                      title: const Text("Flutter"),
+                      controlAffinity: ListTileControlAffinity.leading,
+                      value: checkboxKontrol,
+                      onChanged: (veri){
+                        setState(() {
+                          checkboxKontrol = veri!;
+                        });
+                      }
+                  ),
 
 
 
