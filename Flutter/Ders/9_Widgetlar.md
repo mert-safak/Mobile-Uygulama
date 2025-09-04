@@ -102,7 +102,12 @@ Daha sonra bir SwitchListeTile Widget'ı oluşturulur. Bunu SizedBox'a almaz ve 
 ```
 
 ## ChechBox
-Mantık Switch'in aynısıdır. Sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! şeklinde sonunda ! olarak yazılır.
+Mantık Switch'in aynısıdır. Başta yine bir Bool değişkende tutulur değer.
+```
+bool switchKontrol = false
+```
+Fark sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! şeklinde sonunda ! olarak yazılır.
+```
                 SizedBox(width: 200,
                   child: CheckboxListTile(
                       title: const Text("Flutter"),
@@ -114,7 +119,7 @@ Mantık Switch'in aynısıdır. Sadece burada gelen veri nullable'dır. Bu yüzd
                         });
                       }
                   ),
-
+```
 
 
 
