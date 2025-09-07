@@ -196,6 +196,41 @@ Devamında ise Slider widget'ı eklenir üzerine de takip edebilmek için bir te
             }),
 ```
 
+## Date Time Picker
+TextField kullanacağımız için _ ile başlayan class'ta  yine saat ve tarih için ayrı TextEditingController tanımlanır
+```
+  var tfSaat = TextEditingController();
+  var tfTarih = TextEditingController();
+```
+Devamında ise .then'den önceki kısımda Icon'a tıklayınca date veya time picker'ı açar ama seçince işlem yapmaz. O kısımda seçileni alp controller'ın text'ine eşitliyoruz.
+```
+            Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(width: 120,
+                  child: TextField(controller: tfSaat, decoration: const InputDecoration(hintText: "Saat"),),),
+                IconButton(onPressed: (){
+                  showTimePicker(context: context, initialTime: TimeOfDay.fromDateTime(DateTime.now()))
+                  .then((value) => {
+                    tfSaat.text = "${value!.hour} : ${value.minute}"
+                  });
+                  
+                }, icon: const Icon(Icons.access_time)),
+                SizedBox(width: 120,
+                  child: TextField(controller: tfTarih, decoration: const InputDecoration(hintText: "Tarih"),),),
+                IconButton(onPressed: (){
+                  showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2000),
+                      lastDate: DateTime(2030))
+                      .then((value) =>
+                  {
+                    tfTarih.text = "${value!.day} / ${value.month} / ${value.year}"
+                  });
+                }, icon: const Icon(Icons.date_range)),
+              ],
+            ),
+```
 
 
 
