@@ -261,7 +261,7 @@ DropdownButton(
 ```
 
 ## GestureDetector
-Tıklanabilen görseller oluşturmaya yarar. Öncelikle bir Container widget'ı oluşturulur. Boyu ve genişliği yazılır. Rengi de belirtilir. Devamında ise imleç ile seçilip alt+enter ile widget as wrapped seçilir. Sonra GestureDetector olarak değiştirilir Wdiget. bunun onTap onDoubleTap onLongPress gibi metodları vardır.
+Tıklanabilen görseller oluşturmaya yarar. Öncelikle bir Container widget'ı oluşturulur. Boyu ve genişliği yazılır. Rengi de belirtilir. Devamında ise imleç ile seçilip alt+enter ile wrapped with widget seçilir. Sonra GestureDetector olarak değiştirilir Wdiget. bunun onTap onDoubleTap onLongPress gibi metodları vardır.
 ```
 GestureDetector(
                 onTap: (){
@@ -275,8 +275,8 @@ GestureDetector(
                 },
                 child: Container(width: 200, height: 100, color: Colors.red,))
 ```
-
-
+## ScrollView
+Eğer tasarım herhangi bir ekranda sığmazsa kaydırılabilir olmasını sağlar Scaffold içindeki body'nin Widget'ı imleç ile seçilir ve alt+enter ile wraped with widget seçilir ise Widget'ın ismi de SingleChildScrollView olarak seçilirse yapılabilir.
 
 
 
