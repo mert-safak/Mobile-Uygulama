@@ -260,7 +260,21 @@ DropdownButton(
                 }),
 ```
 
-
+## GestureDetector
+Tıklanabilen görseller oluşturmaya yarar. Öncelikle bir Container widget'ı oluşturulur. Boyu ve genişliği yazılır. Rengi de belirtilir. Devamında ise imleç ile seçilip alt+enter ile widget as wrapped seçilir. Sonra GestureDetector olarak değiştirilir Wdiget. bunun onTap onDoubleTap onLongPress gibi metodları vardır.
+```
+GestureDetector(
+                onTap: (){
+                  print("Container tek tıklandı");
+                },
+                onDoubleTap: (){
+                  print("Container çift tıklandı");
+                },
+                onLongPress: (){
+                  print("Container uzun basıldı");
+                },
+                child: Container(width: 200, height: 100, color: Colors.red,))
+```
 
 
 
