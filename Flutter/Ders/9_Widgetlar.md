@@ -231,8 +231,34 @@ Devamında ise .then'den önceki kısımda Icon'a tıklayınca date veya time pi
               ],
             ),
 ```
+## DropDown Menu
+Öncelikle string elemanlar barındıran bir ulkeler listesi ve secilenUlke değişkeni tanımlıyoruz. Seçilen ulkeyi ekranda göstermeye yarar varsayılan olarak da Türkiye seçilidir. Devamında ise listeye elemanları eklerken initState() ile ekleriz çünkü setState vb. metodlar çağrıldığında yeniden listeye bu elemanlar eklenmesin sadece ilk açıldığında çalışsın diye bu şekilde yapılır. Listeye eleman eklemeler genelde bu şekilde olurlar.
+```
+  var ulkelerListesi = <String>[];
+  String secilenUlke = "Turkiye";
 
-
+  @override
+  void initState() {
+    super.initState();
+    ulkelerListesi.add("Turkiye");
+    ulkelerListesi.add("İtalya");
+    ulkelerListesi.add("Japonya");
+  }
+```
+Devamında ise Widget tanımlanır. Normal çağırınca value ve icon özelliği taslar olarak gelmez ancak el ile klenebilir. Value varsayılan seçili değeri gösterir. Yukarda bunun için Türkiye tanımlamıştık. items için önce ulkelerListesi.map yapılır. Dart dilinde bir listenin tüm elemanları bu şekilde .map ile gösterilir. Sonra  DropdownMenuItem isimli bir class çağırılır ve içindeki ulke isimli tanımlaıdğımız değişken buraya yazılır. OnChanged ile de yine callBack'de kullanıcı tarafından seçilen setState altında secilenUlke değişkenine atanır.
+```
+DropdownButton(
+                value: secilenUlke,
+                icon: const Icon(Icons.arrow_drop_down),
+                items: ulkelerListesi.map((ulke) {
+                  return DropdownMenuItem(value: ulke, child: Text(ulke),);
+                }).toList(),
+                onChanged: (veri){
+                  setState(() {
+                    secilenUlke = veri!;
+                  });
+                }),
+```
 
 
 
