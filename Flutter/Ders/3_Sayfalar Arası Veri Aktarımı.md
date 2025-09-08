@@ -1,4 +1,4 @@
-Stateful bir sayfadan üstteki StatefulWidget'a kşöeli parantezden sonra değişkenler tanımlanır. Daha sonra kendi constructoru silinir ve generate ile tüm yazılanlar constructor olarak işaretlenir ok denilir. Yapı Aşağıdaki gibi olur. İstenirse hepsi seçilip AltGr+7 ile köşeli parantez uapılıp required'ler yazılır.
+Stateful bir sayfadan üstteki StatefulWidget'a köşeli parantezden sonra değişkenler tanımlanır. Daha sonra kendi constructoru silinir ve generate ile tüm yazılanlar constructor olarak işaretlenir ok denilir. Yapı Aşağıdaki gibi olur. İstenirse hepsi seçilip AltGr+7 ile köşeli parantez uapılıp required'ler yazılır.
 ```
 class OyunEkrani extends StatefulWidget {
   String ad;
