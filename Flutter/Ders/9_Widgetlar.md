@@ -278,6 +278,46 @@ GestureDetector(
 ## ScrollView
 Eğer tasarım herhangi bir ekranda sığmazsa kaydırılabilir olmasını sağlar Scaffold içindeki body'nin Widget'ı imleç ile seçilir ve alt+enter ile wraped with widget seçilir ise Widget'ın ismi de SingleChildScrollView olarak seçilirse yapılabilir.
 
+## FAB (Floating Action Button)
+Altında list olsun yukarı aşağı kaydır ne yaparsan yap her zaman aşağıda sabit kalır. Aşağıdaki şekilde scaffold'un içine eklenir
+```
+return Scaffold(
+      appBar: AppBar(title: const Text("Kişiler"),),
+      body: const Center(),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+
+          },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
