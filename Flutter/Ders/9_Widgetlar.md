@@ -1,6 +1,6 @@
 # WIDGET'LAR
 ## TextField
-Öncelikle TextField'da yazılan verileri tutmak için _ ile başlayan sayfa class'ı altına bir değişken tanımlarız. Dceoration kısmı içeri yazılan metin kısmının ayarlarıdır. keyboardType ile kullanıcıya nasıl bir klavye açılacağını belirleriz. obscureText ise şifre yazar gibi yazılanı gizlemeye yarar
+Öncelikle TextField'da yazılan verileri tutmak için _ ile başlayan sayfa class'ı altına bir değişken tanımlarız. Dceoration kısmı içeri yazılan metin kısmının ayarlarıdır. keyboardType ile kullanıcıya nasıl bir klavye açılacağını belirleriz. obscureText ise şifre yazar gibi yazılanı gizlemeye yarar. 
 ```
 class _AnasayfaState extends State<Anasayfa> {
   var tfController = TextEditingController(); //Kullanıcıdan alınan veriyi tutmak için controller
@@ -25,6 +25,13 @@ class _AnasayfaState extends State<Anasayfa> {
     );
   }
 }
+```
+Ayrıca içerisinde onChanged isimili de bir metod vardır. Buradan örneğin bir arama butonunda karakterler girildikçe işlem yaptıran bir fonksiyon yazılabilir. Parantez içerisindeki kısım içerisine yazılan metni ifade eder
+```
+onChanged: (aramaSonucu) {
+            ara(aramaSonucu);
+          },
+        ) :
 ```
 ## ElevatedButton
 Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir. İsmini TextButton olarak değiştirirsek de çerçevesiz sadece yazı olan bir button çıkar.
