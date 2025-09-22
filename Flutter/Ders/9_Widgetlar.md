@@ -301,7 +301,8 @@ return Scaffold(
   }
 }
 ```
-
+## Spacer
+Çok basit bir işlem yapar araya boşluk koyar diğer widget'ı örneğin çarpı buttonu satırın en sonuna koymak için kullanılabilir. Diğer widget kendine yer bulabileceği en son noktayan gider.
 
 
 
