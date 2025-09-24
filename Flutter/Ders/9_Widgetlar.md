@@ -114,7 +114,7 @@ Mantık Switch'in aynısıdır. Başta yine bir Bool değişkende tutulur değer
 bool switchKontrol = false
 ```
 Fark sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! şeklinde sonunda ! olarak yazılır.
-```
+```dart
                 SizedBox(width: 200,
                   child: CheckboxListTile(
                       title: const Text("Flutter"),
@@ -133,7 +133,7 @@ CheckBox gibi ancak sadece tek biri seçilebilir. Öncelikle yine bir değişken
 int radioDeger = 0;
 ```
 Devamında ise kod aşağıdaki gibidir
-```
+```dart
 Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(width: 200,
