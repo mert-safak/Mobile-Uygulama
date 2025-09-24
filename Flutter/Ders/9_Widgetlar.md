@@ -27,7 +27,7 @@ class _AnasayfaState extends State<Anasayfa> {
 }
 ```
 Ayrıca içerisinde onChanged isimili de bir metod vardır. Buradan örneğin bir arama butonunda karakterler girildikçe işlem yaptıran bir fonksiyon yadartzılabilir. Parantez içerisindeki kısım içerisine yazılan metni ifade eder
-```
+```dart
 onChanged: (aramaSonucu) {
             ara(aramaSonucu);
           },
