@@ -1,14 +1,14 @@
 # KULLANICI ETKİLEŞİMİ SNACK BAR VE ALERT
 ## Snack Bar
 Bir buton içerisine tanımlanabilir. Veya başka bir aksiyona da tanımlanabilir. Kod orjinal olarak sadece bildirim göstermek için şu şekildedir. Kod düzeltme çoğu taslak kısmı otomatik olarak getirir.
-```
+```dart
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: const Text("Silmek istiyor musunuz?")));
 
 ```
 ### Button içerisinde SnackBar
 Aşağıda ElevatedButton içerisinde yazılmış hali mevcuttur.
-```
+```dart
             ElevatedButton(onPressed: (){
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: const Text("Silmek istiyor musunuz?")));
@@ -17,7 +17,7 @@ Aşağıda ElevatedButton içerisinde yazılmış hali mevcuttur.
             ),
 ```
 Ayrıica bir de içerisine action tanımlanarak bir eylem gerçekleştirilebilir veya yeni bir SnackBar ile bilgi verilebilir. Aşağıda yeni bir SnackBar ile bilgi verilmiştir.
-```
+```dart
             ElevatedButton(onPressed: (){
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
@@ -32,7 +32,7 @@ Ayrıica bir de içerisine action tanımlanarak bir eylem gerçekleştirilebilir
 ```
 ### Çeşitli SnackBar Özelleştirmeleri
 Ayrıca istenirse aşağıdaki şekilde de özelleştirmeler yapılabilir.
-```
+```dart
             ElevatedButton(onPressed: (){
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
@@ -54,7 +54,7 @@ Ayrıca istenirse aşağıdaki şekilde de özelleştirmeler yapılabilir.
 ## Alert Dialog
 ### Alert Dialog Kod
 Alert Dialog aşağıdaki kod ile yapılır.
-```
+```dart
              showDialog(
                   context: context,
                   builder: (BuildContext context){
@@ -64,7 +64,7 @@ Alert Dialog aşağıdaki kod ile yapılır.
                     );
 ```
 ### Button İçinde Alert Dialog
-```
+```dart
             ElevatedButton(onPressed: (){
               showDialog(
                   context: context,
@@ -84,7 +84,7 @@ Alert Dialog aşağıdaki kod ile yapılır.
 ```
 ### Alert Dialog İçerisine Buton Ekleme
 Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton eklenebilir. Bu button tek başına tıklamayla işlem yapar ama tıklandıktan sonra kapanmaz. kapatılmak istenirse Navigator.pop(context) ile cihazın geri tuşunu çalıştırma kullanılır.
-```
+```dart
               showDialog(
                   context: context,
                   builder: (BuildContext context){
@@ -106,12 +106,12 @@ Aşağıda görüldüğü üzere AlertDialog'un actions özelliğine TextButton 
 
 ## Alert Dialog Özelleştirme
 Kodun devamında özelleştirme TextField() ile yapılacak bu yüzden öncelikle _ ile başlayan sayfa class'ına aşağıdaki kod yazılır ve bir TexEditController tanımlanır. Eğer TexField tekrar açıldığında son girilen verinin görünmemesi istenirse temizlemek gerekir tfControl.text = ""; bu kod yazılarak daha sonra tekrar açıldığında ilk haline döner.
-```
+```dart
 var tfControl = TextEditingController();
 ```
 
 Kodun devamı ise aşağıdaki şekildedir.
-```
+```dart
             ElevatedButton(onPressed: (){
               showDialog(
                   context: context,
