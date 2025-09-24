@@ -1,7 +1,7 @@
 # NESNE TABANLI PORGRAMLAMA
 ## Kalıtım(Miras)
 Miras almak istediğimiz sınıfı extends olarak ekleriz ve super anahtarı ile özelliğini ekleriz
-```
+```dart
 class Saray extends Ev {
   int kule_sayisi;
 
@@ -9,7 +9,7 @@ class Saray extends Ev {
 }
 ```
  Veya değer default olarak verilmek istenmiyorsa aşağıdaki şekilde yapılabilir.
- ```
+ ```dart
 import 'ev.dart';
 
 class Saray extends Ev {
@@ -20,7 +20,7 @@ class Saray extends Ev {
 ```
 ## Upcasting ve Downcasting
  Upcasting üst class'a dönüştürür downcasting ile alt class'a
- ```
+ ```dart
   //Downcasting
   var ev  = Ev(pencereSayisi: 10);
   var saray = ev as Saray;
