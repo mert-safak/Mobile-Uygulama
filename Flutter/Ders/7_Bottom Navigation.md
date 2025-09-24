@@ -3,7 +3,7 @@
 
 ## Bottom Navigation Tasarım Kısmı
 Öncelikle Bottom Navigation Tasarımını Oluşturalım. Bottom Navigation olan sayfanın body kısmınıa direkt body: const Sayfa1(), şeklinde yazarsak direk ilgili sayfa gösterilir. Yukarda da belirtildiği gibi amaç bottom navigationı ayrı bir sayfa gibi gösterip içerisinde sayfa göstermektir. Örneğin
-```
+```dart
 return Scaffold(
       appBar: AppBar(title: const Text("Bottom Navigation"),),
       body: const SayfaBir(),
@@ -12,7 +12,7 @@ Devamında ise bottomNavitaionBar eklenir. İçerisine liste olarak items'lar al
 Aşağıdaki şekilde BottomNavigationBar içerisinde BottomNavigationBarItem'lar oluşturulup liste halinde verilir ve current index
 tanımlanır tanımlanmazsa default=0'dır. onTap tanımlanmazsa tıklamyı yakalayamayız.
 Sadece görsel hali aşağıdadır
-```
+```dart
     return Scaffold(
       appBar: AppBar(title: const Text("Bottom Navigation"),),
       body: SayfaBir(),
@@ -26,16 +26,16 @@ Sadece görsel hali aşağıdadır
 ## Kodlanmış Hali
 
 Eğer bir liste yaparsak ve bir secilenIndex değişkeni ile de kontrol edersek sayfa ona göre değişir. Örneğin aşağıdaki şeklilde değişkenler ve liste tanımlanır.
-```
+```dart
 int secilenIndeks = 0;
 var sayfalar = [const SayfaBir(),const SayfaIki(),const SayfaUc()];
 ```
 Devamında ise body kısmını da düzenleyelim ve listeyi ekleyelim. Liste BottomNavigation'ın onTap'ı ile tetiklenince sayfa da değişir.
-```
+```dart
 body: sayfalar[secilenIndeks],
 ```
  Ayrıca currentIndex:'e de secılenIndex verilirse hangi index seçiliyse onu tıklanmış gösterir. OnTap içinde de callBack'i yani hangi sayfaya tıklandığını index isimli bir değişkende tutarız ve setState içerisinde secilenIndex = index; yaparsak callBack'ten kullanıcının seçtiği index bilgisi alınır ve seçilen indexi değiştirir. Aynı zamanda setState ile seçilen index'e göre tanımlanan listeden gösterilen sayfa değiştirilir ve baştan çizilir.
- ```
+ ```dart
     return Scaffold(
       appBar: AppBar(title: const Text("Bottom Navigation"),),
       body: sayfalar[secilenIndeks],
