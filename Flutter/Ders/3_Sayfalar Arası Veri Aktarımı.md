@@ -12,7 +12,7 @@ class OyunEkrani extends StatefulWidget {
 }
 ```dart
  widget.ad, widget.yas diyerek o verilere erişebiliriz
- ```
+ ```dart
 Text("${widget.ad} - ${widget.yas} - ${widget.boy} - ${widget.bekar}"),
 ```
 Anasayfa hata vermektedir. Sebebi az önce oluşturduğumuz veriler constructor olarak oluşturuldu. Navigator'deki sayfa yapısı değişti . Bu yüzden silinip tekrar yazılıp seçilir. Aşağıdaki örnekteki gibi Navigator ile birlikte gönderilir.
