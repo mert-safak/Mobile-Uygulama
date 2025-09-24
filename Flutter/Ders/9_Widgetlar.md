@@ -1,7 +1,7 @@
 # WIDGET'LAR
 ## TextField
 Öncelikle TextField'da yazılan verileri tutmak için _ ile başlayan sayfa class'ı altına bir değişken tanımlarız. Dceoration kısmı içeri yazılan metin kısmının ayarlarıdır. keyboardType ile kullanıcıya nasıl bir klavye açılacağını belirleriz. obscureText ise şifre yazar gibi yazılanı gizlemeye yarar. 
-```
+```dart
 class _AnasayfaState extends State<Anasayfa> {
   var tfController = TextEditingController(); //Kullanıcıdan alınan veriyi tutmak için controller
   String alinanVeri = ""; //Alınan veriyi ekrana yazdırmak için tuttuğumuz değişken
@@ -26,7 +26,7 @@ class _AnasayfaState extends State<Anasayfa> {
   }
 }
 ```
-Ayrıca içerisinde onChanged isimili de bir metod vardır. Buradan örneğin bir arama butonunda karakterler girildikçe işlem yaptıran bir fonksiyon yazılabilir. Parantez içerisindeki kısım içerisine yazılan metni ifade eder
+Ayrıca içerisinde onChanged isimili de bir metod vardır. Buradan örneğin bir arama butonunda karakterler girildikçe işlem yaptıran bir fonksiyon yadartzılabilir. Parantez içerisindeki kısım içerisine yazılan metni ifade eder
 ```
 onChanged: (aramaSonucu) {
             ara(aramaSonucu);
@@ -35,7 +35,7 @@ onChanged: (aramaSonucu) {
 ```
 ## ElevatedButton
 Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir. İsmini TextButton olarak değiştirirsek de çerçevesiz sadece yazı olan bir button çıkar.
-```
+```dart
             ElevatedButton(onPressed: (){
               setState(() {
                 alinanVeri = tfController.text;
@@ -45,18 +45,18 @@ Eğer bu button da eklenirse butona basınca veriyi alır ve ekranda gösterir. 
 ```
 ## Resim Gösterme
 Öncelikle ana paketin üzerine bir klasör oluşturulur tercihen ismi resimler. Sonra resimler bu klasörün içerisine atılır. Lib klasörünün içinde olursa resimler görünmez ana paketin altında olacak klasör. Daha sonra resimler klasörünün pubspec.yaml içerisine eklenmesi gerekir bunun için ilgili satıra assets: ve altına klasör aşağıdaki şekilde yazılır boşluklar ve girintiler çok önemlidir. Bu yüzden true'dan sonra enter'a basılır assets: yazılıp tekrar enter'a basılır ve - koyulup boşluk bırakılıp klasör yazılır sonuna / konulur.
-```
+```dart
   uses-material-design: true
 
   assets:
     - resimler/
 ```
 Devamında ise Image.asset ekleyerek resimler gösterilir
-```
+```dart
 Image.asset("resimler/mutlu.png"),
 ```
 Butonlara tıklayarak değişimini yaptığımız kod ise`aşağıdadır. Burada sadece resimAdi değişkeni _ ile başlayan class isminin altında String resimAdi = "mutlu.png"; bu şekilde başlangıç değeri olarak tanımlanmıştır.
-```
+```dart
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
               children: [
                 ElevatedButton(onPressed: (){
@@ -77,19 +77,19 @@ Butonlara tıklayarak değişimini yaptığımız kod ise`aşağıdadır. Burada
 
 ### Online Resim Gösterme
 Image.asset değil de Image.network kullanacağız. src yazan yere "" içerisinde url yazarsak resim görünür.
-```
+```dart
 Image.network(src)
 ```
 #### SizedBox ile boyutunu ayarlama
 Image.network imleç ile seçilip alt+enter yapılıp wrap with SizedBox seçilirse. Width ve Height değerleri girilip resmin boyutu değiştirilebilir.
-```
+```dart
 SizedBox(width: 100, height: 100,
               child: Image.network("https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/ev-usulu-pizza-yemekcom.jpg"),),
 ```
 
 ## Switch
 İlk önce _ ile başlayan class'da true,false kontrol için bir değişken oluşturulur.
-```
+```dart
 bool switchKontrol = false;
 ```
 Daha sonra bir SwitchListeTile Widget'ı oluşturulur. Bunu SizedBox'a almaz ve width değeri vermezsek ekranı kaplar ve ekran boş görünür. controlAffinity: ListTileControlAffinity.leading şu satırda chechbox'ın solda title'ın ise sağdaq olmasını sağlıyoruz. En sonda setState ile de switch konumunu değiştirip baştan çizdiriyoruz.
@@ -110,7 +110,7 @@ Daha sonra bir SwitchListeTile Widget'ı oluşturulur. Bunu SizedBox'a almaz ve 
 
 ## ChechBox
 Mantık Switch'in aynısıdır. Başta yine bir Bool değişkende tutulur değer.
-```
+```dart
 bool switchKontrol = false
 ```
 Fark sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! şeklinde sonunda ! olarak yazılır.
@@ -129,7 +129,7 @@ Fark sadece burada gelen veri nullable'dır. Bu yüzden checkboxKontrol = veri! 
 ```
 ## RadioList
 CheckBox gibi ancak sadece tek biri seçilebilir. Öncelikle yine bir değişken tanımlanır ancak bu sfer integer olarak.
-```
+```dart
 int radioDeger = 0;
 ```
 Devamında ise kod aşağıdaki gibidir
@@ -165,11 +165,11 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 ```
 ## ProggressBar
 Ekrana yükleniyor şeklinde bir widget eklemek için kullanılır. Yine önce bir değişken tanımlanır.
-```
+```dart
 bool progressKontrol = false;
 ```
 Burada 2 buton ile bu progress bar çıkartılmıştır veya durdurulmuştur. Burada önce CircularProgressIndicator() isimli bir widget eklenir. Daha sonra alt+enter wrap with widget ile üzerine bir Visibility widget eklenir. Buradan da görünür olma olmama durumunu kontrol eden değişkenimiz atanır.
-```
+```dart
 Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(onPressed: (){
@@ -190,11 +190,11 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 ```
 ## Slider
 Öncelikle yine _ ile başlayan class'a bir değişken tanımlanır.
-```
+```dart
 double ilerleme = 30.0;
 ```
 Devamında ise Slider widget'ı eklenir üzerine de takip edebilmek için bir text eklenebilir. Text'te double'da çok fazla ondalık olduğu için önce int'e çevirip sonra string yaptık.
-```
+```dart
             Text(ilerleme.toInt().toString()),
             Slider(max:100, min:0.0, value: ilerleme, onChanged: (veri){
               setState(() {
@@ -205,12 +205,12 @@ Devamında ise Slider widget'ı eklenir üzerine de takip edebilmek için bir te
 
 ## Date Time Picker
 TextField kullanacağımız için _ ile başlayan class'ta  yine saat ve tarih için ayrı TextEditingController tanımlanır
-```
+```dart
   var tfSaat = TextEditingController();
   var tfTarih = TextEditingController();
 ```
 Devamında ise .then'den önceki kısımda Icon'a tıklayınca date veya time picker'ı açar ama seçince işlem yapmaz. O kısımda seçileni alp controller'ın text'ine eşitliyoruz.
-```
+```dart
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(width: 120,
@@ -240,7 +240,7 @@ Devamında ise .then'den önceki kısımda Icon'a tıklayınca date veya time pi
 ```
 ## DropDown Menu
 Öncelikle string elemanlar barındıran bir ulkeler listesi ve secilenUlke değişkeni tanımlıyoruz. Seçilen ulkeyi ekranda göstermeye yarar varsayılan olarak da Türkiye seçilidir. Devamında ise listeye elemanları eklerken initState() ile ekleriz çünkü setState vb. metodlar çağrıldığında yeniden listeye bu elemanlar eklenmesin sadece ilk açıldığında çalışsın diye bu şekilde yapılır. Listeye eleman eklemeler genelde bu şekilde olurlar.
-```
+```dart
   var ulkelerListesi = <String>[];
   String secilenUlke = "Turkiye";
 
@@ -253,7 +253,7 @@ Devamında ise .then'den önceki kısımda Icon'a tıklayınca date veya time pi
   }
 ```
 Devamında ise Widget tanımlanır. Normal çağırınca value ve icon özelliği taslar olarak gelmez ancak el ile klenebilir. Value varsayılan seçili değeri gösterir. Yukarda bunun için Türkiye tanımlamıştık. items için önce ulkelerListesi.map yapılır. Dart dilinde bir listenin tüm elemanları bu şekilde .map ile gösterilir. Sonra  DropdownMenuItem isimli bir class çağırılır ve içindeki ulke isimli tanımlaıdğımız değişken buraya yazılır. OnChanged ile de yine callBack'de kullanıcı tarafından seçilen setState altında secilenUlke değişkenine atanır.
-```
+```dart
 DropdownButton(
                 value: secilenUlke,
                 icon: const Icon(Icons.arrow_drop_down),
@@ -269,7 +269,7 @@ DropdownButton(
 
 ## GestureDetector
 Tıklanabilen görseller oluşturmaya yarar. Öncelikle bir Container widget'ı oluşturulur. Boyu ve genişliği yazılır. Rengi de belirtilir. Devamında ise imleç ile seçilip alt+enter ile wrapped with widget seçilir. Sonra GestureDetector olarak değiştirilir Wdiget. bunun onTap onDoubleTap onLongPress gibi metodları vardır.
-```
+```dart
 GestureDetector(
                 onTap: (){
                   print("Container tek tıklandı");
@@ -287,7 +287,7 @@ Eğer tasarım herhangi bir ekranda sığmazsa kaydırılabilir olmasını sağl
 
 ## FAB (Floating Action Button)
 Altında list olsun yukarı aşağı kaydır ne yaparsan yap her zaman aşağıda sabit kalır. Aşağıdaki şekilde scaffold'un içine eklenir
-```
+```dart
 return Scaffold(
       appBar: AppBar(title: const Text("Kişiler"),),
       body: const Center(),
