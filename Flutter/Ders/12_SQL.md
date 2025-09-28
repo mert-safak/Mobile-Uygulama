@@ -29,7 +29,7 @@ Aşağıdaki kod ile tüm tablo okunur. * tablodaki tüm alanları getirir.
 ```SQL
 SELECT*FROM urunler
 ```
-### Seçili Sütunları Okuma
+### Seçili Sütunları Okuma(SELECT Sorguları)
 Burada sadece urun_adi bilgisi okunur.
 ```SQL
 SELECT urun_adi FROM urunler
@@ -38,3 +38,39 @@ Aşağıda ise urun_adi ve urun_fiyati getirilir.
 ```SQL
 SELECT urun_adi,urun_fiyati FROM urunler
 ```
+Aşağıdaki ise urun_fiyatı=750 olanları seçer.
+```SQL
+SELECT * FROM urunler WHERE urun_fiyati=750
+```
+Benzer şekilde matematik öperatörleri de kullanılabilir.
+```SQL
+SELECT * FROM urunler WHERE urun_fiyati>5000
+```
+### Satır Sayısı
+Aşağıdaki kod ile satır sayısı gösterilir. Ancak bu şekilde açıklaması count(*) olur.
+```SQL
+SELECT count(*) FROM urunler
+```
+Aşağıdaki şekilde yapılır ise açıklama kısmı da toplam olmuş olur.
+```SQL
+SELECT count(*) as toplam FROM urunler
+```
+Aşağıdaki şekilde ise urun_fiyati=750 olanların sayısını gösterir.
+```SQL
+SELECT count(*) as toplam FROM urunler WHERE urun_fiyati=750
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
