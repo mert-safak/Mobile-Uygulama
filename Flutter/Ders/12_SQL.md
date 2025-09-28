@@ -1,4 +1,5 @@
 # SQL
+SQL vb. veritabanında veriler kullnılırken sayısal değerlerin tekrar etmesinde sorun yoktur ama string tipi değerler tekrar ederse performans düşer. Bu yüzden bu tip verilerde yeni bir tablo oluşturulup bu verilerin yerine id değeri diğer tabloya yazılır ve foreign key yapılır.
 ## DB Browser
 DB Browser ile new database ile yeni bir veritabanı uluşturulur. Tablo oluştur ile tablolar oluşturulur tabloların string integer vb. değerleri seçilir ve urun_id gibi sütunlar primary key yapılır auto seçilir. Foreign key'ler için ise  yabancı anahtar kısmından ilgili tablo ve sütun eklenebilir.
 
@@ -120,7 +121,10 @@ Normalde seçim yaparken bu şekilde foreign keyler kod ile belirtilmelidir. WHE
 ```SQL
 SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id //Yanlış Kullanım
 ```
-
+Doğru kullanım aşağıdaki gibidir. Tek tek hangi sütunlar isteniyorsa onlar yazılmalıdır.
+```SQL
+SELECT siparis_id,urun_adi,urun_fiyati,musteri_adi,musteri_adresi,siparis_adeti FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id
+```
 
 
 
