@@ -115,6 +115,12 @@ Rastgele veri seçilirken de limitleme eklenirse örneğin içinden birisi rastg
 SELECT * FROM urunler ORDER BY RANDOM() LIMIT 1
 ```
 
+## Foreign Key Yapısı
+Normalde seçim yaparken
+:x:```SQL
+SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id
+```
+
 
 
 
