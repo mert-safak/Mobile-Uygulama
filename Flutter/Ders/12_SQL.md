@@ -85,7 +85,10 @@ Tam tersi sıralamak için Descend(DESC) sıralama kullanılır.
 ```SQL
 SELECT * FROM urunler ORDER BY urun_adi DESC
 ```
-
+Benzer şekilde sayısal da sıralama yapar.
+```SQL
+SELECT * FROM urunler ORDER BY urun_fiyati DESC
+```
 
 
 
