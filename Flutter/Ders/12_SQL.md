@@ -38,6 +38,7 @@ Aşağıda ise urun_adi ve urun_fiyati getirilir.
 ```SQL
 SELECT urun_adi,urun_fiyati FROM urunler
 ```
+### Belirli Bir Değere Göre Filtreleme
 Aşağıdaki ise urun_fiyatı=750 olanları seçer.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati=750
@@ -46,10 +47,12 @@ veya ismi TV olanları. String ifadeler için tek tırnak kullanılır.
 ```SQL
 SELECT * FROM urunler WHERE urun_adi = 'TV'
 ```
+#### Matematik Oparetörü
 Benzer şekilde matematik öperatörleri de kullanılabilir.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati>5000
 ```
+#### Karşılaştırma Operatörü
 Ayrıca karşılaştırma operatörleri de kullanılabilir.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati>5000 AND urun_fiyati<9000
@@ -67,7 +70,21 @@ Aşağıdaki şekilde ise urun_fiyati=750 olanların sayısını gösterir.
 ```SQL
 SELECT count(*) as toplam FROM urunler WHERE urun_fiyati=750
 ```
-
+### Sıralama
+#### Ascend Sıralama
+Bu şekilde urun_adi değerine göre alfabetik sıralama yapılıp seçilir. 
+```SQL
+SELECT * FROM urunler ORDER BY urun_adi
+```
+Bu ve yukardaki aslında aynıdır buna ASC(Ascend) sıralama denir.
+```SQL
+SELECT * FROM urunler ORDER BY urun_adi ASC
+```
+#### Descend Sıralama
+Tam tersi sıralamak için Descend(DESC) sıralama kullanılır.
+```SQL
+SELECT * FROM urunler ORDER BY urun_adi DESC
+```
 
 
 
