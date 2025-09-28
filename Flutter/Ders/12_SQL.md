@@ -117,8 +117,8 @@ SELECT * FROM urunler ORDER BY RANDOM() LIMIT 1
 
 ## Foreign Key Yapısı
 Normalde seçim yaparken
-✖️ Hatalı Yapı```SQL
-SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id
+```SQL
+//SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id
 ```
 
 
