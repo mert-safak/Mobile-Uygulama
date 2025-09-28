@@ -46,6 +46,10 @@ Benzer şekilde matematik öperatörleri de kullanılabilir.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati>5000
 ```
+Ayrıca karşılaştırma operatörleri de kullanılabilir.
+```SQL
+SELECT * FROM urunler WHERE urun_fiyati>5000 AND urun_fiyati<9000
+```
 ### Satır Sayısı
 Aşağıdaki kod ile satır sayısı gösterilir. Ancak bu şekilde açıklaması count(*) olur.
 ```SQL
