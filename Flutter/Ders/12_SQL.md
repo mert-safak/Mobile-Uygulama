@@ -116,9 +116,9 @@ SELECT * FROM urunler ORDER BY RANDOM() LIMIT 1
 ```
 
 ## Foreign Key Yapısı
-Normalde seçim yaparken
+Normalde seçim yaparken bu şekilde foreign keyler kod ile belirtilmelidir. WHERE ve devamında yazılan kısım yazılmazsa matrisleme yapar fazladan veri gelir.  Ancak bu şekilde yapılınca da aynı sütun birkaç kez görilebilir.
 ```SQL
-//SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id
+SELECT * FROM siparisler,urunler,musteriler WHERE siparisler.urun_id=urunler.urun_id AND siparisler.musteri_id=musteriler.musteri_id //Yanlış Kullanım
 ```
 
 
