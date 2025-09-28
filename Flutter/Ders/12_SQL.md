@@ -24,3 +24,17 @@ DELETE FROM urunler WHERE urun_id=5
 ```
 
 ## Execute SQL Veri Okuma
+### Tüm Tabloyu Okuma
+Aşağıdaki kod ile tüm tablo okunur. * tablodaki tüm alanları getirir.
+```SQL
+SELECT*FROM urunler
+```
+### Seçili Sütunları Okuma
+Burada sadece urun_adi bilgisi okunur.
+```SQL
+SELECT urun_adi FROM urunler
+```
+Aşağıda ise urun_adi ve urun_fiyati getirilir.
+```SQL
+SELECT urun_adi,urun_fiyati FROM urunler
+```
