@@ -57,6 +57,12 @@ Ayrıca karşılaştırma operatörleri de kullanılabilir.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati>5000 AND urun_fiyati<9000
 ```
+#### İçerisinde Geçen Harf/Karaktere Göre Seçme
+Burada içerisinde a harfi geçenleri buluyor. % ile başlarsa başlangıç harf/karaktere % ile biterse bitiş harf/karaktere iki tane % arasında olursa içerisinde geçen harf/karaktere göre seçim yapar.
+```
+SELECT * FROM urunler WHERE urun_adi like '%a%'
+```
+
 ### Satır Sayısı
 Aşağıdaki kod ile satır sayısı gösterilir. Ancak bu şekilde açıklaması count(*) olur.
 ```SQL
