@@ -5,7 +5,7 @@ DB Browser ile new database ile yeni bir veritabanı uluşturulur. Tablo oluştu
 ## Browse Data
 Bu kısımdan el ile veri eklenebilir. Veri eklenip sağ tarafa değeri yazılıp uygula denilirse veri işlenir.
 
-## Execute SQL
+## Execute SQL Veri Ekleme-Çıkarma
 Bu kısımdan kod ile işlem yapılır. Sağ alttan da SQL Günlüğü seçilirse yapılan işlem görülebilir.
 ### Veri Ekleme
  Örneğin aşağıdaki şekilde veri eklenebilir. Tabloyu tanımlarken urun_id'yi auto seçip  sadece urun_adi ve urun_fiyati girmemiz yeterlidir. urun_id'yi kenisi arttırarak yazar. Kodu yazıp play tuşuna basarsak kod ve tablo eklenir.
@@ -13,8 +13,14 @@ Bu kısımdan kod ile işlem yapılır. Sağ alttan da SQL Günlüğü seçilirs
 INSERT INTO urunler(urun_adi,urun_fiyati) VALUES('Telefon',8000)
 ```
 ### Veri Değiştirme
-Aşağıdaki şekilde veriler güncellenebilir. Güncellerken id kullanılır. Tablodan id değerine bakılabilir.
+Aşağıdaki şekilde veriler güncellenebilir. Güncellerken id(primary key) kullanılır. Tablodan id değerine bakılabilir.
 ```SQL
 UPDATE urunler SET urun_fiyati=1200 WHERE urun_id=7
 ```
 ### Veri Silme
+Aşağıdaki şekilde veriler sililebilir. Aynı şekilde id(primary key) kullanılır.
+```SQL
+DELETE FROM urunler WHERE urun_id=5
+```
+
+## Execute SQL Veri Okuma
