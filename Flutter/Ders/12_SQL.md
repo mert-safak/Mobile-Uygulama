@@ -59,7 +59,7 @@ SELECT * FROM urunler WHERE urun_fiyati>5000 AND urun_fiyati<9000
 ```
 #### İçerisinde Geçen Harf/Karaktere Göre Seçme
 Burada içerisinde a harfi geçenleri buluyor. % ile başlarsa başlangıç harf/karaktere % ile biterse bitiş harf/karaktere iki tane % arasında olursa içerisinde geçen harf/karaktere göre seçim yapar.
-```
+```SQL
 SELECT * FROM urunler WHERE urun_adi like '%a%'
 ```
 
@@ -95,9 +95,25 @@ Benzer şekilde sayısal da sıralama yapar.
 ```SQL
 SELECT * FROM urunler ORDER BY urun_fiyati DESC
 ```
+### Rastgele Sıralama
+Aşağıdaki şekilde rastgele sıralama yapılır. Her çalıştırmada rastgele veri sıralaması gelir.
+```SQL
+SELECT * FROM urunler ORDER BY RANDOM()
+```
 
-
-
+### Veri seçerken Limitleme
+Veriler seçilirken gelen veri sayısını limitleyebiliriz. Aşağıdaki şekilde sadece 2 veri gelir.
+```SQL
+SELECT * FROM urunler LIMIT 2
+```
+Bu şekilde koşul da konulabilir.
+```SQL
+SELECT * FROM urunler WHERE urun_fiyati>2000 LIMIT 2
+```
+Rastgele veri seçilirken de limitleme eklenirse örneğin içinden birisi rastgele seçilebilir.
+```SQL
+SELECT * FROM urunler ORDER BY RANDOM() LIMIT 1
+```
 
 
 
