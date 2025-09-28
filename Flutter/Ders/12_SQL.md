@@ -6,7 +6,7 @@ DB Browser ile new database ile yeni bir veritabanı uluşturulur. Tablo oluştu
 Bu kısımdan el ile veri eklenebilir. Veri eklenip sağ tarafa değeri yazılıp uygula denilirse veri işlenir.
 
 ## Execute SQL
-Bu kısımdan kod ile işlem yapılır. Sağ alttan da SQL Günlüğü seçilirse yapılan işlem görülebilir.
+Bu kısımdan kod ile işlem yapılır. Sağ alttan da SQL Günlüğü seçilirse yapılan işlem görülebilir. Örneğin aşağıdaki şekilde veri eklenebilir. Tabloyu tanımlarken urun_id'yi auto seçip  sadece urun_adi ve urun_fiyati girmemiz yeterlidir. urun_id'yi kenisi arttırarak yazar.
 ```SQL
 INSERT INTO urunler(urun_adi,urun_fiyati) VALUES('Telefon',8000)
 ```
