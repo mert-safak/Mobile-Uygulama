@@ -42,6 +42,10 @@ Aşağıdaki ise urun_fiyatı=750 olanları seçer.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati=750
 ```
+veya ismi TV olanları. String ifadeler için tek tırnak kullanılır.
+```SQL
+SELECT * FROM urunler WHERE urun_adi = 'TV'
+```
 Benzer şekilde matematik öperatörleri de kullanılabilir.
 ```SQL
 SELECT * FROM urunler WHERE urun_fiyati>5000
