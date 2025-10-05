@@ -32,7 +32,7 @@ bizim ana dosyamız main.dart olduğu için onun içerisinde cubitleri tanımlam
     );
 ```
 Devamında ise parantez içerisine providers: [] ile köşeli parantez içine Cubitler yazılır. Örneğin;
-```
+```dart
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
