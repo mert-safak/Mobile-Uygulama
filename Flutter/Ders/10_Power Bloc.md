@@ -66,3 +66,37 @@ Devamında ise parantez içerisine providers: [] ile köşeli parantez içine Cu
     );
   }
 ```
+
+## Dao Repository
+Uygulamada cubitlere gönderilecek fonksiyonlar burada yazılır. Class olarak tanımlanır.
+```
+class KisilerDaoRepository {
+}
+```
+
+içerisinde çeşitli fonksiyonlar bulunur. Veritabanı vb. işlemleri de burada yapılır. Örneğin;
+```
+  Future<List<Yapilacaklar>>yapilacaklariYukle() async {
+    var yapilacaklarListesi = <Yapilacaklar>[];
+    var y1 = Yapilacaklar(id: 1, name: "Uyan");
+    var y2 = Yapilacaklar(id: 2, name: "Yüzünü yıka");
+    var y3 = Yapilacaklar(id: 3, name: "Kahvaltı yap");
+    yapilacaklarListesi.add(y1);
+    yapilacaklarListesi.add(y2);
+    yapilacaklarListesi.add(y3);
+    return yapilacaklarListesi;
+  }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
