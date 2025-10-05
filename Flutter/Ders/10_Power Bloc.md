@@ -17,7 +17,7 @@ dependencies:
   flutter_bloc:
 ```
 ## Cubitleri Oluşturma
-her sayfa için sayfaİsmi_cubit.dart şeklinde cubitler oluşturulur. Örneğin anasayfa_cubit şeklinde olur. İçerisine aşağıdaki şekilde bir class oluşturulur ve Cubit sınıfından miras alır. Altına ise bir constructor tanımlanır. Super anahtarının içerisindeki varsayılan olarak emit edilen değerdir.
+her sayfa için sayfaİsmi_cubit.dart şeklinde cubitler oluşturulur. Örneğin anasayfa_cubit şeklinde olur. İçerisine aşağıdaki şekilde bir class oluşturulur ve Cubit sınıfından miras alır. Altına ise bir constructor tanımlanır. Super anahtarının içerisindeki varsayılan olarak emit edilen değerdir. int değerlerde 0 yazılabilir.
 ```dart
 class AnasayfaCubit extends Cubit<List<Kisiler>>{
 AnasayfaCubit():super(<Kisiler>[]);
