@@ -110,7 +110,7 @@ body: BlocBuilder<AnasayfaCubit,List<Yapilacaklar>>(
 ```
 
 ### Başlangıç state'i oluşturma
-initState altında başlangıç için emit edilmesi gereken değerler olabilir. Örneğin aşağıda AnasayfaCubit içerisindeki yapılacaklarıYukle fonksiyonu başlangıçta bir kez emit edilir. Bu konulmazsa uygulamada ilk etapta boş ekran açılır. Çünkü state edecek hiçbir veri yoktur.
+initState altında başlangıç için emit edilmesi gereken değerler olabilir. Örneğin aşağıda AnasayfaCubit içerisindeki yapılacaklarıYukle fonksiyonu başlangıçta bir kez emit edilir. Bu konulmazsa uygulamada ilk etapta boş ekran açılabilir. Çünkü state edecek hiçbir veri yoktur.
 ```dart
 void initState() {
     super.initState();
