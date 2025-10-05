@@ -16,6 +16,13 @@ dependencies:
     sdk: flutter
   flutter_bloc:
 ```
+## Cubitleri Oluşturma
+her sayfa için sayfaİsmi_cubit.dart şeklinde cubitler oluşturulur. Örneğin anasayfa_cubit şeklinde olur. İçerisine aşağıdaki şekilde bir class oluşturulur ve Cubit sınıfından miras alır.
+```dart
+class AnasayfaCubit extends Cubit<List<Kisiler>>{
+AnasayfaCubit():super(<Kisiler[]>);
+}
+```
 
 ## main.dart altında tanımlama
 bizim ana dosyamız main.dart olduğu için onun içerisinde cubitleri tanımlamak gereklidir. Aşağıdaki halındaki MetarialApp silinir yerine MultiBlocProvider yazılır.
