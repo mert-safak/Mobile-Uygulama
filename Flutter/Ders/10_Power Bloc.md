@@ -9,10 +9,47 @@ lib--> ui --> cubit ->anasayfa_cubit.dart
 ```
 
 ## Kütüphanenin kurulumu
-pubspec.yaml içerisinde dependencies altına
+pubspec.yaml içerisinde dependencies altına flutter_bloc yazılır girintiler çok önemlidir. Bu şekilde güncel son versiyon yüklenir.
 ```dart
 dependencies:
   flutter:
     sdk: flutter
   flutter_bloc:
+```
+
+## main.dart altında tanımlama
+bizim ana dosyamız main.dart olduğu için onun içerisinde cubitleri tanımlamak gereklidir. Aşağıdaki halındaki MetarialApp silinir yerine MultiBlocProvider yazılır.
+```dart
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const Anasayfa(),
+    );
+```
+Devamında ise parantez içerisine providers: [] ile köşeli parantez içine Cubitler yazılır. Örneğin;
+```
+  @override
+  Widget build(BuildContext context) {
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => KayitSayfaCubit(),),
+        BlocProvider(create: (context) => DetaySayfaCubit(),),
+        BlocProvider(create: (context) => AnasayfaCubit(),),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+      
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        ),
+        home: const Anasayfa(),
+      ),
+    );
+  }
 ```
