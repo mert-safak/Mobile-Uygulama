@@ -31,7 +31,7 @@ class DetaySayfaCubit extends Cubit<void>{
 ```
 
 ## main.dart altında tanımlama
-bizim ana dosyamız main.dart olduğu için onun içerisinde cubitleri tanımlamak gereklidir. Aşağıdaki halındaki MetarialApp silinir yerine MultiBlocProvider yazılır.
+bizim ana dosyamız main.dart olduğu için onun içerisinde cubitleri tanımlamak gereklidir. Aşağıdaki halındaki MetarialApp üzerine wrap with widget ile widget eklenir ve MultiBlocProvider yazılır.
 ```dart
   Widget build(BuildContext context) {
     return MaterialApp(
