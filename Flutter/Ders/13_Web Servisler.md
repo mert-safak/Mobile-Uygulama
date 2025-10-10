@@ -16,18 +16,18 @@ Classlar veriye göre ayarlanır. Bizim verilerimiz örneğin bu şekilde olsun.
    "kisiler":[
       {
          "kisi_id":"19126",
-         "kisi_ad":"tuna aa",
-         "kisi_tel":"1453"
+         "kisi_ad":"mert",
+         "kisi_tel":"1234"
       },
       {
          "kisi_id":"19127",
-         "kisi_ad":"orhan",
-         "kisi_tel":"1905"
+         "kisi_ad":"safak",
+         "kisi_tel":"1357"
       },
       {
          "kisi_id":"19128",
-         "kisi_ad":"mustafa ",
-         "kisi_tel":"7833247023"
+         "kisi_ad":"saglam ",
+         "kisi_tel":"5678"
       },
       {
 
